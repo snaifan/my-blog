@@ -77,10 +77,11 @@ h2{
 }
 footer{
     text-align: center;
-    margin-top: 40px;
-    background-color: #4a90e2;
-    color: white;
-    padding: 15px 0;
+    margin-top: 3rem;
+    background-color: #f9f9f9;
+    color: #666;
+    padding: 2rem 0;
+    border-top:1px solid #eee;
 }
 /*Blog Post Styling*/
 .blog-post h2{
