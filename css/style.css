@@ -39,6 +39,23 @@ nav a:hover,nav a.active{
     text-decoration: underline;
     color:#d19036
 }
+/* Heo section*/
+.hero{
+    background-color:#fff0d6;
+    padding:4px 20px;
+    border-radius:12px;
+    margin-bottom:40px;
+    text-align:center;
+}
+.hero h2{
+    font-size:1,8rem;
+    margin-bottom:15px;
+    color:#3e2f1c;
+}
+.hero p{
+    font-size:1.1rem;
+    color:#5a4a3a;
+}
 /* main content area*/
 main{
     max-width: 1000px;
