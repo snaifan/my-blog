@@ -141,9 +141,9 @@ blog-preview h3{
     font-size:1.4rem;
     margin:0 0 0.5rem;
 }
-.blog-preview article h3 a{
+.blog-preview h3 a{
     text-decoration:none;
-    color:#0066cc;
+    color:inherit;
 }
 .blog-preview article h3 a:hover{
     text-decoration:underline;
