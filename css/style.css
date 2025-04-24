@@ -1,0 +1,116 @@
+/*Basic reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+/* Body and general layout*/
+Body{
+    background: linear-gradient(to right, #f7f7f7,#e2e8f0);
+    background-color: #f7f7f7;/* soft warm light tone*/
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+/*header styles*/
+header{
+    background-color: #4a90e2;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+ header h1{
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+nav{
+    margin-top: 10px;
+}
+nav a{
+    margin:0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+nav a:hover,nav a.active{
+    text-decoration: underline;
+    font-weight: bold;
+}
+/* main content area*/
+main{
+    max-width: 1000px;
+    margin: 20px auto;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+h2{
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+.latest-posts ul{
+    list-style-type: none;
+}
+.latest-posts li {
+    margin-bottom: 20px;
+}
+.latest-posts li, .blog-post{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.latest-posts a{
+    font-size: 1.4rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+.latest-posts a:hover{
+    color: #4a90e2;
+}
+.post-date{
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 5px;
+}
+footer{
+    text-align: center;
+    margin-top: 40px;
+    background-color: #4a90e2;
+    color: white;
+    padding: 15px 0;
+}
+/*Blog Post Styling*/
+.blog-post h2{
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+.blog-post p{
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+.blog-post .post-date{
+    color: #888;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+/*Media queries for responsive design*/
+@media screen and (maxwidth:768px){
+    body{
+        font-size: 14px;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    nav a{
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+    .latest-posts a{
+        font-size: 1.2rem;
+    }
+}
