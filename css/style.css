@@ -1,121 +1,104 @@
-/*Basic reset*/
+/*reset*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Body styling*/
+body{
     font-family: 'Open Sans', sans-serif;
-}
-/* Body and general layout*/
-Body{
-    background: linear-gradient(to right, #f7f7f7,#e2e8f0);
-    background-color: #f7f7f7;/* soft warm light tone*/
-    color: #333;
     line-height: 1.6;
-    font-size: 16px;
+    background-color: #fdfaf5;
+    color: #333;
+    padding: 20px;
 }
-/*header styles*/
+
+/*header*/
 header{
     background-color: #fff6e6;
     padding: 20px;
-    border-radius:10px;
-    margin-bottom:30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     text-align: center;
-    box-shadow:0 2px 6px rgba(0,0,0,0.05);
 }
- header h1{
+header h1{
     font-size: 2.2rem;
-    color:#4d3e33;
-    margin-bottom:10px;
+    color: #4d3e33;
+    margin-bottom: 10px;
 }
 nav a{
-    margin:0 12px;
+    margin: 0 12px;
     text-decoration: none;
     color: #865c28;
+    font-weight: bold;
     font-size: 1rem;
-    transition:color 0.3s
-    font-weight:bold;
+    transition: color 0.3s;
 }
-nav a:hover,nav a.active{
-    text-decoration: underline;
-    color:#d19036
+nav a:hover{
+    color: #d19036;
 }
-/* Heo section*/
+/*hero section*/
 .hero{
-    background-color:#fff0d6;
-    padding:4px 20px;
-    border-radius:12px;
-    margin-bottom:40px;
-    text-align:center;
+    background-color: #fff0d6;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 .hero h2{
-    font-size:1,8rem;
-    margin-bottom:15px;
-    color:#3e2f1c;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #3e2f1c;
 }
 .hero p{
-    font-size:1.1rem;
-    color:#5a4a3a;
+    font-size: 1.1rem;
+    color: #5a4a3a;
 }
-/* main content area*/
-main{
-    max-width: 1000px;
-    margin: 20px auto;
-    width: 90%;
-    background-color: white;
-    box-shadow: 0 4px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-h2{
-    font-size: 2rem;
-    color: #4a90e2;
-    margin-bottom: 20px;
-}
+/*Blog Preview & Posts*/
 .latest-posts, .blog-list{
-    margin-top:30px;
+    margin-top: 30px;
 }
-/*.latest-posts li {
+.blog-preview{
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 6px solid #dba55d;
     margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s;
 }
-.latest-posts li, .blog-post{
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
+.blog-preview:hover{
+    transform: translateY(-3px);
 }
-.latest-posts a{
-    font-size: 1.4rem;
-    color: #333;
+.blog-preview h3 a{
     text-decoration: none;
-    font-weight: bold;
+    color: #3c2c1e;
 }
-.latest-posts a:hover{
-    color: #4a90e2;
-}*/
-.post-date{
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 5px;
+.blog-preview p{
+    color: #5a4a3a;
 }
+
+/*About sectio*/
+main section{
+    padding: 20px;
+    background-color: #fffaf0;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+main section h2,main section h3{
+    color: #4d3e33;
+    margin-bottom: 15px;
+}
+/*footer*/
 footer{
     text-align: center;
     margin-top: 50px;
     color: #7a6b5c;
+    font-size: 0.9rem;
     padding: 10px;
 }
-/*Blog Post Styling*/
-.blog-post h2{
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-.blog-post p{
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-.blog-post .post-date{
-    color: #888;
-    font-style: italic;
-    margin-bottom: 20px;
-}
+
 /*Media queries for responsive design*/
 @media screen and (maxwidth:768px){
     body{
@@ -132,64 +115,3 @@ footer{
         font-size: 1.2rem;
     }
 }
-.blog-listing{
-    max-width:800px;
-    margin:auto;
-    padding:2rem
-}
-.blog-preview{
-    background-color:#ffffff;
-    padding:20px;
-    border-radius:8px;
-    margin-bottom:20px;
-    border-left:6px solid #db55d;
-    transition:transform 0.2s;
-}
-.blog-preview h2{
-    font-size:1.8rem;
-    color:#444;
-    margin-bottom:1rem;
-}
-.blog-preview h3{
-    margin-bottom:0.5rem;
-    font-size:2rem;
-    color:#2a6d9b;
-}
-.blog-preview article h3{
-    font-size:1.4rem;
-    margin:0 0 0.5rem;
-}
-.blog-preview article h3 a{
-    text-decoration:none;
-    color:inherit;
-}
-.blog-preview article h3 a:hover{
-    text-decoration:underline;
-}
-.blog-preview .date{
-    font-size:0.9rem;
-    color:#888
-    margin-bottom:0.5rem;
-}
-.blog-preview p{
-    font-size:1rem;
-    color:#333;
-    line-height:1.6;
-}
-.blog-preview a{
-    display:inline-block;
-    margin-top:0.5rem;
-    font-weight:bold;
-    color:#008060
-}
-.read-more{
-    display:inline-block;
-    margin-top:0.5rem;
-    color:#3366cc;
-    font-weight:bold;
-    text-decoration:none;
-}
-.read-more:hover{
-    text-decoration:underline;
-}
-    
