@@ -9,7 +9,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    background-color: #fdfaf5;
+    background-color: #f0f2f5;
     color: #333;
     padding: 20px;
 }
@@ -57,38 +57,114 @@ nav a:hover{
     color: #5a4a3a;
 }
 /*Blog Preview & Posts*/
-.latest-posts, .blog-list{
+.latest-posts{
     margin-top: 30px;
 }
+.blog-list{
+    display:grid;
+    flex-direction: column;
+    gap:2rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+}
 .blog-preview{
-    background-color: #ffffff;
+    background: #f9f9f9;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.blog-preview img{
+    width: 100px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 20px;/*Add margin*/
+    border-radius: 10px 10px 0 0; 
+}
+.blog-content{
     padding: 20px;
-    border-left: 6px solid #dba55d;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    transition: transform 0.2s;
+}
+.blog-content h3 a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+}
+.blog-content .date{
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+.blog-content p{
+    margin-bottom: 15px;
+    color: #555;
 }
 .blog-preview:hover{
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 .blog-preview h3 a{
     text-decoration: none;
-    color: #3c2c1e;
+    color: #333;
 }
 .blog-preview p{
-    color: #5a4a3a;
+    color: #666;
+    margin: 1rem 0;
 }
-
+.read-more{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #0088cc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+.read-more:hover{
+    text-decoration: underline;
+    background-color: #006699;
+}
+/*Banner secton*/
+.banner{
+    background: linear-gradient(to right #ffecd2, #fcb69f);
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+.banner h2{
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+}
 /*About sectio*/
 main section{
+    max-width: 800px;
+    margin: 40px auto;
     padding: 20px;
-    background-color: #fffaf0;
-    border-radius: 10px;
-    margin-bottom: 30px;
+    background-color: #fff8f0;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-main section h2,main section h3{
-    color: #4d3e33;
-    margin-bottom: 15px;
+main section h2{
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+main section p{
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+main blockquote{
+    margin-top: 30px;
+    font-style: italic;
+    color: #888;
+    border-left: 4px solid #ffb347;
+    padding-left: 15px;
 }
 /*footer*/
 footer{
