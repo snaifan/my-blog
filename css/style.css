@@ -62,14 +62,12 @@ nav a:hover{
 }
 .blog-list{
     display:grid;
-    flex-direction: column;
-    gap:2rem;
     padding: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 .blog-preview{
     background: #f9f9f9;
-    display: flex;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -80,7 +78,6 @@ nav a:hover{
     width: 100px;
     height: 180px;
     object-fit: cover;
-    margin-right: 20px;/*Add margin*/
     border-radius: 10px 10px 0 0; 
 }
 .blog-content{
@@ -102,7 +99,7 @@ nav a:hover{
 }
 .blog-preview:hover{
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 .blog-preview h3 a{
     text-decoration: none;
