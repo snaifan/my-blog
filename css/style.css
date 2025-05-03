@@ -1,16 +1,21 @@
-/*/*reset*/
-{
+/*General Reset*/
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling*/
+/*Base Styles*/
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifns-serif;
     line-height: 1.6;
-    background-color: #f0f2f5;
+    background-color: #f9f9f9;
     color: #333;
+}
+/*Container*/
+.cotainer{
+    max-width: 1200px;
+    margin: auto;
     padding: 20px;
 }
 
@@ -28,6 +33,12 @@ header h1{
     color: #4d3e33;
     margin-bottom: 10px;
 }
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 nav a{
     margin: 0 12px;
     text-decoration: none;
@@ -49,12 +60,14 @@ nav a:hover{
     animation:fadeSlide 1.5s ease-out;
 }
 .hero h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #333;
 }
 .hero p{
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    color: #555;
 }
 .hero .btn{
     display: inline-block;
@@ -68,7 +81,7 @@ nav a:hover{
     margin-top: 1.5rem;
 }
 .hero .btn:hover{
-    background: #333;
+    background: #222;
     color: #fff;
 }
 /*Hero animation*/
@@ -115,7 +128,7 @@ nav a:hover{
     font-size: 1.2rem;
     color: #777;
 }
-/*Blog Preview & Posts*/
+/*Feautured section*/
 .featured-blog{
     padding: 4rem 2rem;
     text-align: center;
@@ -163,22 +176,23 @@ nav a:hover{
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
-/*Search bar*/
-.search-bar{
-    text-align: center;
-    margin-bottom: 2rem;
-}
-.search-bar input{
-    width: 60%;
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
+/*SearchInput*/
+#searchInput{
+    width: 90%;
+    padding: 12px 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    transition: border-color 0.3s;
+    display: block;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+
 }
-.search-bar input:focus{
-    border-color: #007bff;
+#searchInput:focus{
+    border-color: #6c63ff;
     outline: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
 }
 .load-more-container{
     text-align: center;
@@ -197,17 +211,17 @@ nav a:hover{
 #loadMoreBtn:hover{
     background-color: #0056b3;
 }
-/*.blog-preview{
+.blog-preview{
     background: #fff;
     border-radius: 8px;
-    margin-bottom: 2rem;
+    margin-bottom: 40px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     padding: 1.5rem;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 /*.blog-preview img{
-    width: 100px;
-    height: 180px;
+    max-width:100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px 10px 0 0; 
 }*/
@@ -243,15 +257,17 @@ nav a:hover{
 .blog-preview h3{
     margin-top: 0;
     margin-bottom: 0.8rem;
+    color: #333;
+    font-size: 1.5rem;
 }
 .blog-preview p{
-    color: #555;
+    color: #666;
     margin: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
 }
-.read-more{
+.read-more {
     text-decoration: none;
-    color: #0077cc;
+    color: #fff;
     font-weight: bold;
     display: inline-block;
     padding: 8px 16px;
@@ -260,15 +276,15 @@ nav a:hover{
     transition: background-color 0.3s ease;
     margin-top: 1rem;
 }
-.read-more:hover{
+.read-more:hover {
+    background-color: #005fa3;
     text-decoration: underline;
 }
 /*Banner secton*/
 .banner{
-    background: linear-gradient(to right #ffecd2, #fcb69f);
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
     padding: 60px 20px;
     text-align: center;
-    color: #333;
 }
 .banner h2{
     font-size: 2.5em;
@@ -317,14 +333,15 @@ main blockquote{
 /*footer*/
 footer{
     text-align: center;
-    margin-top: 50px;
-    color: #7a6b5c;
+    margin-top: 40px;
+    color: #fff;
     font-size: 0.9rem;
-    padding: 10px;
+    padding: 20px 0;
+    background: #333;
 }
 
 /*Media queries for responsive design*/
-@media screen and (maxwidth:768px){
+@media screen and (max-width: 768px){
     header{
         flex-direction: column;
         align-items: center;
@@ -332,11 +349,11 @@ footer{
     nav{
         justify-content: center;
     }
-    .hero h1{
-        font-size: 1.2rem;
+    .hero h2{
+        font-size: 2rem;
     }
     .hero p{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .testimonials{
         margin: 2rem auto;
