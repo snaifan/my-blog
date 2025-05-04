@@ -14,35 +14,50 @@
         <h1>All Blog Posts</h1>
         <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <a href="blog.html" class="active">Blogs</a>
+            <a href="blog.html" class="active">Blog</a>
             <a href="about.html">About</a>
         </nav>
     </header>
 
     <main>
-        <input type="text" id="searchInput" placeholder="Search blog...">
+        <input type="text" id="searchInput" placeholder="Search blog posts...">
         <section class="blog-list">
             <h2>Latest Posts</h2>
 
             <article class="blog-preview">
-                <h3 class="blog-title"><a href="posts/why-small-beginnings-matter.html">Why Small Beginnings Matter</a></h3>
+                <a href="posts/why-small-beginnings-matter.html" aria-label="Read more about Why Small Beginnings Matter">
+                    <h3 class="blog-title">Why Small Beginnings Matter</h3>
+                </a>
                 <p class="post-date">Published on April 25, 2025</p>
                 <p>
                     Starting small gives you something powerful: momentum. It removes the fear of perfection and replaces it with action. You don't have to be ready; you just have to begin.
                 </p>
-                <a href="posts/why-small-beginnings-matter.html" class="read-more">Read more</a>
+                <a href="posts/why-small-beginnings-matter.html" class="read-more">Read more about Why Small Beginnings Matter</a>
             </article>
 
-            <!-- Add more blog posts below using the same structure -->
-            <!-- 
-            <article class="blog-preview">
-                <h3><a href="posts/another-post.html">Another Blog Title</a></h3>
-                <p class="post-date">Published on [Date]</p>
-                <p>Brief preview text...</p>
-                <a href="posts/another-post.html" class="read-more">Read more</a>
+            <!--<article class="blog-preview">
+                <a href="posts/the-power-of-consistency.html" aria-label="Read more about The Power of Consistency">
+                    <h3 class="blog-title">The Power of Consistency</h3>
+                </a>
+                <p class="post-date">Published on May 1, 2025</p>
+                <p>
+                    Consistency is the key to achieving long-term goals. Small, regular efforts compound over time to create significant results. Find your rhythm and stick with it.
+                </p>
+                <a href="posts/the-power-of-consistency.html" class="read-more">Read more about The Power of Consistency</a>
             </article>
-            -->
-        </section>
+
+            <article class="blog-preview">
+                <a href="posts/embracing-failure.html" aria-label="Read more about Embracing Failure">
+                    <h3 class="blog-title">Embracing Failure</h3>
+                </a>
+                <p class="post-date">Published on May 4, 2025</p>
+                <p>
+                    Failure is not the opposite of success; it's a stepping stone. Learn from your mistakes, adapt, and keep moving forward. Every setback contains valuable lessons.
+                </p>
+                <a href="posts/embracing-failure.html" class="read-more">Read more about Embracing Failure</a>
+            </article>-->
+
+            </section>
     </main>
 
     <footer>
@@ -55,12 +70,12 @@
             const searchText = searchInput.value.toLowerCase();
             blogs.forEach(blog => {
                 const title = blog.querySelector(".blog-title").textContent.toLowerCase();
-                blog.style.display = title.includes(searchText) ? "block" : "none";
                 const content = blog.textContent.toLowerCase();
-                blog.style.display = content.includes(searchText) ? "block" : "none";
+                const shouldShow = title.includes(searchText) || content.includes(searchText);
+                blog.style.display = shouldShow ? "block" : "none";
             });
         });
     </script>
-    
+
 </body>
 </html>

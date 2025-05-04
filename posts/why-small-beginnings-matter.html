@@ -3,47 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Small Beginnings Matter</title>
+    <title>Why Small Beginnings Matter - My Blog</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-        <h1>Why Small Beginnings Matter</h1>
-        <nav>
+        <h1><a href="../index.html">My Blog</a></h1>
+        <nav aria-label="Main navigation">
             <a href="../index.html">Home</a>
-            <a href="../blog.html" class="active">Blogs</a>
+            <a href="../blog.html" class="active">Blog</a>
             <a href="../about.html">About</a>
-            
         </nav>
     </header>
-    <main>
-        <section class="blog-post">
-            <p><em>Published on April 25, 2025</em></p>
-            <p>
-                Every great story starts with a humble beginning. The biggest successes you admire today were once nothing more than small ideas, simple habits, and quiet efforts.
-            </p>
-            <p>
-                Starting small gives you something powerful: momentum. It removes the fear of perfection and replaces it with action. You don't have to be ready; you just have to begin.
-            </p>
-            <blockquote>
-                "Start where you are, use what you have. Do what you can." - Arthur Ashe
-            </blockquote>
-            <p>
-                Think of a tiny seed. It doesn't look impressive at first, but with time, patience, and care, it grows into something mighty. Your journey works exactly the same way. 
-            </p>
-            <p>
-                In a world obsessed with instant results, small beginnings teach us to trust the process. They remind us that growth is natural, beautiful, and unstoppsble when nurtured daily.
-            </p>
-            <p>
-                So don't wait for the perfect time or perfect resources. Start now. Start small. Let the journey unfold.
-            </p>
-            <p><strong>Believe in small beginnings - they carry the magic of big dreams</strong></p>
-        </section>
+    <main class="post-page">
+        <article class="blog-post">
+            <header class="post-header">
+                <h2 class="post-title">Why Small Beginnings Matter</h2>
+                <p class="post-date">Published on April 25, 2025</p>
+            </header>
+            <div class="post-content">
+                <p><em>Every great story starts with a humble beginning. The biggest successes you admire today were once nothing more than small ideas, simple habits, and quiet efforts.</em></p>
+                <p>Starting small gives you something powerful: momentum. It removes the fear of perfection and replaces it with action. You don't have to be ready; you just have to begin.</p>
+                <blockquote>
+                    "Start where you are, use what you have. Do what you can." - Arthur Ashe
+                </blockquote>
+                <p>Think of a tiny seed. It doesn't look impressive at first, but with time, patience, and care, it grows into something mighty. Your journey works exactly the same way.</p>
+                <p>In a world obsessed with instant results, small beginnings teach us to trust the process. They remind us that growth is natural, beautiful, and unstoppable when nurtured daily.</p>
+                <p>So don't wait for the perfect time or perfect resources. Start now. Start small. Let the journey unfold.</p>
+                <p><strong>Believe in small beginnings - they carry the magic of big dreams</strong></p>
+            </div>
+
+            <div class="social-sharing">
+                <h3>Share This Post</h3>
+                <ul class="social-icons">
+                    <li><a id="share-facebook" href="#" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a id="share-twitter" href="#" target="_blank" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a id="share-linkedin" href="#" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+
+           <!-- <section class="related-posts">
+                <h2>You Might Also Like</h2>
+                <div class="related-posts-grid">
+                    <article class="related-post-item">
+                        <a href="the-power-of-consistency.html">
+                            <h3>The Power of Consistency</h3>
+                            <p class="post-date">May 1, 2025</p>
+                        </a>
+                    </article>
+                    <article class="related-post-item">
+                        <a href="embracing-failure.html">
+                            <h3>Embracing Failure</h3>
+                            <p class="post-date">May 4, 2025</p>
+                        </a>
+                    </article>
+                </div>
+            </section>-->
+
+            <section class="comments-section">
+                <h2>Join the Conversation</h2>
+                <div class="comment-form">
+                    <h3>Leave a Comment</h3>
+                    <form id="comment-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comment:</label>
+                            <textarea id="comment" name="comment" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Post Comment</button>
+                    </form>
+                </div>
+
+                <!--<div class="existing-comments">
+                    <h3>Comments</h3>
+                    <article class="comment">
+                        <div class="comment-author">
+                            <p><strong>John Doe</strong></p>
+                            <p class="comment-date">April 26, 2025</p>
+                        </div>
+                        <p class="comment-text">This was a really insightful post! Thanks for sharing.</p>
+                    </article>
+                </div>-->
+            </section>
+
+        </article>
     </main>
     <footer>
         <p><a href="../index.html">Back to Home</a></p>
-        <p>&copy;2025 Atsinwa. All rights reserved</p>
+        <p>&copy; 2025 Atsinwa. All rights reserved</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pageURL = window.location.href;
+            const postTitle = document.querySelector('.post-title').textContent;
+            const postExcerpt = document.querySelector('.post-content > p:first-child').textContent.substring(0, 150) + '...'; // Basic excerpt
+            const blogName = document.querySelector('header h1 a').textContent; // Assuming your blog name is in the header
+
+            const facebookShare = document.getElementById('share-facebook');
+            const twitterShare = document.getElementById('share-twitter');
+            const linkedinShare = document.getElementById('share-linkedin');
+
+            if (facebookShare) {
+                facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageURL)}`;
+            }
+
+            if (twitterShare) {
+                twitterShare.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageURL)}&text=${encodeURIComponent(postTitle)}`;
+            }
+
+            if (linkedinShare) {
+                linkedinShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(pageURL)}&title=${encodeURIComponent(postTitle)}&summary=${encodeURIComponent(postExcerpt)}&source=${encodeURIComponent(blogName)}`;
+            }
+        });
+    </script>
 </body>
 </html>
